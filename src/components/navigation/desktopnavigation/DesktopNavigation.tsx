@@ -14,7 +14,7 @@ export const DesktopNavigation = () => {
 		return authenticatedUser?.username ? <Profile/> : <span onClick={() => history.push(RoutingPath.signInView)}>Signin</span>
 	} */
 	const displayUsernameOrLogin = () => {
-		return authenticatedUser ? <Profile/> : <span onClick={() => history.push(RoutingPath.signInView)}>Signin</span>
+		return authenticatedUser?.username ? <div className='profile'><Profile/> </div> : <span className='signInButton' onClick={() => history.push(RoutingPath.signInView)}>Signin</span>
 	}
 
 	return (

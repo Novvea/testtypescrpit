@@ -7,3 +7,7 @@
 .navigationLogotype {
 	width: 90px;
 }
+
+.profile {
+	grid-column: 15/16;
+}
