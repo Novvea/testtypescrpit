@@ -1,15 +1,18 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { loginCredentials } from '../shared/interface/Interface'
 import { useHistory } from 'react-router-dom'
 import RoutingPath from '../routes/RoutingPath'
+import { UserContext } from '../shared/provider/UserProvider'
 
 export const SignInView = () => {
 	const history = useHistory()
 	const [loginCredentials, setLoginCredentials] = useState<loginCredentials>({ username: '', password: '' })
+	const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext)
 
 	const signIn = () => {
-		history.push(RoutingPath.homeView)
 		localStorage.setItem('user', loginCredentials.username)
+		setAuthenticatedUser(loginCredentials)
+		history.push(RoutingPath.homeView) /* Flyttas till homeview när värdena sparats */
 	}
 
 	return (
