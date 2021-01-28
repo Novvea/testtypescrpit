@@ -3,21 +3,7 @@
   border-radius: 50%;
 }
 
-.profileDropdown {
-  display: none;
-  position: absolute;
-  background-color:#212121cc;
-
-}
-
-.profileWrapper:hover .profileDropdown {
+.profileWrapper:hover .profileDropDown{
   display: block;
 
-}
-
-.profileDropdown span {
-  display: block;
-  cursor: pointer;
-  padding: 10px; 
-  color: white;
 }
