@@ -7,7 +7,7 @@ export const Navigation = () => {
 	const { height, width } = useWindowDimensions()
 
 	const displayNavigationDependingOnDevice = () => {
-		return (width <= 1000)
+		return (width <= 800)
 			? <MobileNavigation/>
 			: <DesktopNavigation/>
 	}

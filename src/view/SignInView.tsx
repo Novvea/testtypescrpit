@@ -15,6 +15,10 @@ export const SignInView = () => {
 		history.push(RoutingPath.homeView) /* Flyttas till homeview när värdena sparats */
 	}
 
+	const x = () => {
+		
+	}
+
 	return (
 		<div>
 			<h1>{loginCredentials.username}</h1>
